@@ -1,0 +1,20 @@
+<div class="toolbar" role="banner">
+</div>
+
+<div class="content" role="main">
+    <ng-container *ngIf="!scanditReady">
+        Loading... Please wait a moment!
+    </ng-container>
+
+
+    <ng-container *ngIf="scanditReady">
+        <ng-container *ngIf="showScanner">
+            <app-scandit-barcode-scanner></app-scandit-barcode-scanner>
+        </ng-container>
+
+        <button style="margin-top: 2rem" (click)="toggleScanner()">toggle Scanner</button>
+    </ng-container>
+
+</div>
+
+

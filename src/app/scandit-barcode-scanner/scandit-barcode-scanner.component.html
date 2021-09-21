@@ -1,0 +1,20 @@
+<div class="scandit-barcode-picker-container" style="height: 176px; background-color: #000">
+    <scandit-barcode-picker
+        #barcodePicker
+        id="barcode-picker"
+        enableTorchToggle="false"
+        enableCameraSwitcher="false"
+        scanningPaused="true"
+        visible="false"
+        playSoundOnScan="true"
+        vibrateOnScan="true"
+        scanSettings.enabledSymbologies='["ean8", "ean13", "upca", "upce", "code128", "code39", "code93", "itf"]'
+        scanSettings.codeDuplicateFilter="2000"
+        scanSettings.searchArea='{"x":0,"y":0.25,"width":1,"height":0.5}'
+        videoFit="cover"
+        (ready)="onReady()"
+        (scan)="onScan($event)"
+        style="height: 176px"
+    >
+    </scandit-barcode-picker>
+</div>
